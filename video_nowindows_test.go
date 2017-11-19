@@ -1,14 +1,14 @@
-// +build !windows
-// These tests are not currently able to run on Windows. They pass on both
-// Linux and OS X, however.
-
 package gocv
 
 import (
+	"runtime"
 	"testing"
 )
 
 func TestMOG2(t *testing.T) {
+	runtime.LockOSThread()
+	defer runtime.UnlockOSThread()
+
 	img := IMRead("images/face.jpg", IMReadColor)
 	if img.Empty() {
 		t.Error("Invalid Mat in MOG2 test")
@@ -29,6 +29,9 @@ func TestMOG2(t *testing.T) {
 }
 
 func TestKNN(t *testing.T) {
+	runtime.LockOSThread()
+	defer runtime.UnlockOSThread()
+
 	img := IMRead("images/face.jpg", IMReadColor)
 	if img.Empty() {
 		t.Error("Invalid Mat in KNN test")

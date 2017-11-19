@@ -19,8 +19,8 @@ import (
 	"os"
 	"strconv"
 
-	"gocv.io/x/gocv"
-	"gocv.io/x/gocv/pvl"
+	"github.com/dudochkin-victor/gocv"
+	"github.com/dudochkin-victor/gocv/pvl"
 )
 
 func main() {

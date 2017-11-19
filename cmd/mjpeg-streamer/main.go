@@ -24,7 +24,7 @@ import (
 	"strconv"
 
 	"github.com/saljam/mjpeg"
-	"gocv.io/x/gocv"
+	"github.com/dudochkin-victor/gocv"
 )
 
 var (

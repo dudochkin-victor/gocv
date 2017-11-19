@@ -4,6 +4,8 @@ package gocv
 #include <stdlib.h>
 #include "videoio.h"
 */
+//#cgo CXXFLAGS: --std=c++1z
+//#cgo LDFLAGS: -lopencv_core -lopencv_videoio -lopencv_imgproc -lopencv_highgui -lopencv_imgcodecs -lopencv_objdetect -lopencv_calib3d -lopencv_video
 import "C"
 import (
 	"sync"
